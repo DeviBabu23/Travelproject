@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INMAKES</title>
+</head>
+<body>
+<H1>REGISTER HERE.......</H1>
+
+<form action="register" method="post">
+    {% csrf_token %}
+    <label>USERNAME:</label>
+    <input type="text" name="username"><br><br>
+    <label>FIRST NAME:</label>
+    <input type="text" name="firstname"><br><br>
+     <label>LAST NAME:</label>
+    <input type="text" name="lastname"><br><br>
+    <label>EMAIL:</label>
+    <input type="email" name="email"><br><br>
+      <label>Password:</label>
+    <input type="password" name="password"><br><br>
+    <label>Conform Password:</label>
+    <input type="password" name="cpassword"><br><br>
+    <input type="submit">
+
+</form>
+
+{% for msg in messages %}
+<h1>{{msg}}</h1>
+{% endfor %}
+</body>
+</html>
